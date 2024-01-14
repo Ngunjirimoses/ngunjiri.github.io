@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peugeot 308 Khai and Karo</title>
+    <link rel="icon" type="image/x-icon" href="Kairo/logo.JPG">
+    <link rel="stylesheet" href="kairo.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navigation {
+            display: flex;
+            /* Adjust styles as needed */
+        }
+
+        .car-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .car-image-table {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .car-image {
+            width: 100%; /* Set the image width to 100% */
+            object-fit: cover;
+            background-color: blue;
+            margin: 2px;
+        }
+
+        .table {
+            color: antiquewhite;
+            font-size: large;
+        }
+
+        .table-content {
+            border-collapse: collapse; /* Fix typo: change "dotted" to "collapse" */
+            border-color: aqua;
+            width: 50%;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .th,
+        .td {
+            text-align: left;
+            padding: 15px; /* Reduce padding for better spacing */
+        }
+
+        .Description {
+            font-size: 25px;
+            color: rgb(224, 215, 215);
+            width: 100%;
+        }
+
+        .preview-image {
+            width: 50px;
+            height: 50px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        #preview-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <!-- Your navigation links go here -->
+        <nav>Home</nav>
+        <nav>Vehicles</nav>
+        <nav>Peugeot 308</nav>
+    </div>
+
+    <div class="car-content">
+        <div class="car-image-table">
+            <!-- Image and Table Section -->
+            <div>
+                <img class="car-image" src="Kairo/more picture/car 1/image1.jpg" alt="img-1">
+                <button onclick="changeImage(-1)">Previous</button>
+                <button onclick="changeImage(1)">Next</button>
+
+                <div id="preview-container">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-1.jpg" onclick="previewClick(0)" alt="Preview 1">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-2.jpg" onclick="previewClick(1)" alt="Preview 2">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-3.jpg" onclick="previewClick(2)" alt="Preview 3">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-4.jpg" onclick="previewClick(3)" alt="Preview 4">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-5.jpg" onclick="previewClick(4)" alt="Preview 5">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-6.jpg" onclick="previewClick(5)" alt="Preview 6">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-7.jpg" onclick="previewClick(6)" alt="Preview 7">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-8.jpg" onclick="previewClick(7)" alt="Preview 8">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-9.jpg" onclick="previewClick(8)" alt="Preview 9">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-10.jpg" onclick="previewClick(9)" alt="Preview 10">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-11.jpg" onclick="previewClick(10)" alt="Preview 11">
+                    <img class="preview-image" src="Kairo/more picture/car 1/Image-12.jpg" onclick="previewClick(11)" alt="Preview 12">
+                    <!-- Add more preview images as needed -->
+                  </div>
+                  <script>
+                     let currentImageIndex = 0;
+                    const images = ["Kairo/more picture/car 1/Image-1.jpg", "Kairo/more picture/car 1/Image-2.jpg", "Kairo/more picture/car 1/Image-3.jpg"];
+                    const mainImage = document.querySelector(".car-image");
+
+                    function changeImage(direction) {
+                        currentImageIndex += direction;
+                        if (currentImageIndex < 0) {
+                            currentImageIndex = images.length - 1;
+                        } else if (currentImageIndex >= images.length) {
+                            currentImageIndex = 0;
+                        }
+                        mainImage.src = images[currentImageIndex];
+                    }
+
+                    function previewClick(index) {
+                        currentImageIndex = index;
+                        mainImage.src = images[currentImageIndex];
+                    }
+                  </script>
+            </div>
+            <div class="table">
+                <h2>Car Information</h2>
+                <table class="table-content">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Value</th>
+                      </tr>
+                      <tr>
+                        <td>Year of Manufacture</td>
+                        <td>2016</td>
+                      </tr>
+                      <tr>
+                        <td>Current Location</td>
+                        <td>Nairobi, Kenya</td>
+                      </tr>
+                      <tr>
+                        <td>Availability</td>
+                        <td>Available</td>
+                      </tr>
+                      <tr>
+                        <td>Drive</td>
+                        <td>2WD</td>
+                      </tr>
+                      <tr>
+                        <td>Mileage</td>
+                        <td>58,000 km</td>
+                      </tr>
+                      <tr>
+                        <td>Engine Size</td>
+                        <td>1200 CC</td>
+                      </tr>
+                      <tr>
+                        <td>Fuel Type</td>
+                        <td>Petrol</td>
+                      </tr>
+                      <tr>
+                        <td>Horse Power</td>
+                        <td>128 Hp</td>
+                      </tr>
+                      <tr>
+                        <td>Transmission</td>
+                        <td>Automatic</td>
+                      </tr>
+                      <tr>
+                        <td>Torque</td>
+                        <td>230 Nm</td>
+                      </tr>
+                      <tr>
+                        <td>Aspiration</td>
+                        <td>Turbo/Supercharger</td>
+                      </tr>
+                      <tr>
+                        <td>Acceleration (0-100 Kph)</td>
+                        <td>9 Secs</td>
+                      </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="Description">
+            <!-- Description Section -->
+            <h1>Peugeot 308</h1>
+            <p>Peugeot 308 is a very simple French automobile that drives seamlessly
+                with the 1.2L turbocharged petrol engine producing 128hp which is quite
+                decent for this car. It is very spacious being the station wagon variant
+                which makes it a good fit for family use and errands. It is also very comfortable
+                and adventurous having a moonroof that extends to the rear passengers.</p>
+            <button><input type="selection" placeholder="Specifications"></button>
+            <button><input type="selection" placeholder="Running Costs"></button>
+        </div>
+    </div>
+
+</body>
+
+</html>

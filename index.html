@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Standing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.5fr 4fr;
+            gap: 20px;
+            padding: 20px;
+            
+        }
+
+        .forms {
+            border: 1px solid black;
+            padding: 20px;
+            font-size: large;
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
+            border: 1px dotted black;
+           
+            
+        }
+
+        .cars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+            gap: 15px;
+            border: none;
+        }
+
+        .car-item {
+            width:auto ;
+            border: 1px dotted black;
+            padding:20px;
+            padding-left: 150px;
+            
+       
+        }
+
+        .car-img {
+            max-width: 100%;
+           
+            height: auto;
+            display: block;
+            
+            padding-left: 150px;
+        }
+
+        .price {
+            color: black;
+            text-align: right;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .location {
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 89px;
+          color: rgb(186, 186, 204);
+          font-weight: bold;
+          margin: 5px;
+          
+        }
+        p {
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 30px;
+          color: blue;
+          font-weight: bold;
+          margin: 5px;
+        }
+        h5 {
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 30px;
+          color: rgb(34, 38, 25);
+          font-weight: bold;
+          margin: 5px;
+
+
+        }
+        .input{
+          font-size: bold;
+          font-size: 15px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="forms">
+            <h2>Forms</h2>
+            <div>
+                <h4>Conditions</h4>
+                <br>
+                <input type="radio"> All
+                <br>
+                <input type="radio"> Hertz Certified
+                <br>
+                <input type="radio"> Hertz Rent2Buy
+            </div>
+            <div>
+                <h4>States</h4>
+                <br>
+                <input type="checkbox"> Arizona
+                <br>
+                <input type="checkbox"> Colorado
+                <br>
+                <input type="checkbox"> Florida
+            </div>
+            <div>
+                <h4>City</h4>
+                <br>
+                <input type="checkbox"> Austin
+                <br>
+                <input type="checkbox"> Baltimore
+                <br>
+                <input type="checkbox"> Dallas
+            </div>
+        </div>
+
+        <div class="cars">
+            <div class="car-item">
+                <div class="car-img"><img src="cars/Car-1.JPG" alt="car-1"></div>
+                <p>2021 Acura ILX Premium Package Sedan</p>
+                <p class="price">$22,933</p>
+               <h5> Location Stone Mountain, GA 44,306 miles</h5>
+                <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+                <div  class="input">
+                    <input type="checkbox"> Compare <button>Save</button>
+                    <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+                </div>
+            </div>
+
+            <div class="car-item">
+                <div class="car-img"><img src="cars/Car-2.JPG" alt="car-2"></div>
+                <p>2018 Acura ILX Special Edition Sedan</p>
+                <p class="price">$19,750</p>
+                <h5 clas="location">Location: San Antonio, TX 53,652 miles</h5>
+                <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+                <div  class="input">
+                    <input type="checkbox"> Compare <button>Save</button>
+                    <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+                </div>
+            </div>
+
+            <div class="car-item">
+                <div class="car-img"><img src="cars/Car-3.JPG" alt="car-3"></div>
+                <p>2019 Acura ILX Technology Package Sedan</p>
+                <p class="price">$19,425</p>
+                <h5 clas="location">Location: Des Plaines, IL 55,494 miles</h5>
+                <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+                <div  class="input">
+                    <input type="checkbox"> Compare <button>Save</button>
+                    <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+                </div>
+            </div>
+            <div class="car-item">
+              <div class="car-img"><img src="cars/Car-1.JPG" alt="car-1"></div>
+              <p>2021 Acura ILX Premium Package Sedan</p>
+              <p class="price">$22,933</p>
+              <h5 clas="location">Location: Stone Mountain, GA 44,306 miles</h5>
+              <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+              <div class="input">
+                  <input type="checkbox"> Compare <button>Save</button>
+                  <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+              </div>
+          </div>
+
+          <div class="car-item">
+              <div class="car-img"><img src="cars/Car-2.JPG" alt="car-2"></div>
+              <p>2018 Acura ILX Special Edition Sedan</p>
+              <p class="price">$19,750</p>
+              <h5 clas="location">Location: San Antonio, TX 53,652 miles</h5>
+              <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+              <div  class="input">
+                  <input type="checkbox"> Compare <button>Save</button>
+                  <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+              </div>
+          </div>
+
+          <div class="car-item">
+              <div class="car-img"><img src="cars/Car-3.JPG" alt="car-3"></div>
+              <p>2019 Acura ILX Technology Package Sedan</p>
+              <p class="price">$19,425</p>
+              <h5 clas="location">Location: Des Plaines, IL 55,494 miles</h5>
+              <div class="car-img"><img src="cars/great price.JPG" alt="car-1"></div>
+              <div  class="input">
+                  <input type="checkbox"> Compare <button>Save</button>
+                  <a href="https://www.hertzcarsales.com/all-inventory/index.htm?geoRadius=0&redirectFromMissingVDP=true&geoZip=">More details</a>
+              </div>
+          </div>
+        </div>
+    </div>
+</body>
+
+</html>
